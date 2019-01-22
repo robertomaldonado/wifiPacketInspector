@@ -1,9 +1,9 @@
 ###############################################
 #    Section 0: Load data to program    # 
 ###############################################
-noise_signal = 500 #Noise guarenteed to be fisrt 500 samples
+noise_signal = 500 #Noise guarenteed to be first 500 samples
 #Read data into program
-read_data = read.csv(file = "r/pkt5", sep=" ")
+read_data = read.csv(file = "r/pkt1", sep=" ")
 #Get Signal and change it to magnitude
 z = complex(real = read_data[,1], imaginary = read_data[,2])
 
@@ -79,8 +79,6 @@ print(sprintf("Finished with the STSs scan at index position: %s", sym_fin-1))
 # #############################################
 # #  PART  II: LEARN CHANNEL FACTOR           # 
 # #############################################
-# 10385
-# startbit = 11308;
 startbit = sym_fin;
 firstLTS = startbit + 64;
 secondLTS = firstLTS + 128;

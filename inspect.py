@@ -37,16 +37,12 @@ def main():
                 B = statesCopy[m][0][sliceObj]
                 B.reverse()
                 out_a = i ^ int(B[1]) ^ int(B[2]) ^ int(B[4]) ^ int(B[5])
-                #out_a = (i + int(B[5]) + int(B[1]) + int(B[4]) + int(B[2]))%2
-                #out_b = (i + int(B[5]) + int(B[0]) + int(B[2]) + int(B[1]))%2
                 out_b = i ^ int(B[0]) ^ int(B[1]) ^ int(B[2]) ^ int(B[5])
                 opt1 = [out_a, out_b]
 
                 B = statesCopy[m+32][0][sliceObj]
                 B.reverse()
                 out_a = i ^ int(B[1]) ^ int(B[2]) ^ int(B[4]) ^ int(B[5])
-                #out_a = (i + int(B[5]) + int(B[1]) + int(B[4]) + int(B[2]))%2
-                #out_b = (i + int(B[5]) + int(B[0]) + int(B[2]) + int(B[1]))%2
                 out_b = i ^ int(B[0]) ^ int(B[1]) ^ int(B[2]) ^ int(B[5])
                 opt2 = [out_a, out_b]        
                 

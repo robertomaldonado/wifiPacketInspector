@@ -1,11 +1,12 @@
-To perform the packet analysis we use R
-run Project3.R to create a file named: "LTSOutput.txt"
+This project inspects a wifi packet to get the header field, in which the length is specified.
 
-This is the chain of convolutional encoding.
-The file must be modified to erase the literal part of the data.
+To perform the packet analysis we use R:
+    Rscript PacketInspector.R
+run PacketInspector.R to create a middle step file named: "LTSOutput.txt"
 
-Which is disassembled in python running:
+This is the chain of convolutional encoding, processed later by python.
 
+"LTSOutput.txt" needs to have all the string values removed, then run python.
+The convolutional code is decoded by python running:
     python inspect.py
-
 The final output is the packet size found inside the header of the PLCP.
